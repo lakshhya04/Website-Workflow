@@ -1,0 +1,128 @@
+/* design/tokens.css */
+
+:root {
+  /* ---- Type ---------------------------------------------------------- */
+  /* Scale: 1.25 major third, base 17px. Every size below is on the scale
+     or is a deliberate exception, noted inline. */
+  --font-sans: "Inter Tight", Inter, system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Berkeley Mono", monospace;
+
+  --text-xs: 0.75rem;     /* 12px labels, captions, legal */
+  --text-sm: 0.875rem;    /* 14px secondary body, table cells */
+  --text-base: 1.0625rem; /* 17px body. not 16. 17 reads calmer */
+  --text-lg: 1.3125rem;   /* 21px lead paragraph, card titles */
+  --text-xl: 1.625rem;    /* 26px h3 */
+  --text-2xl: 2.0625rem;  /* 33px h2 */
+  --text-3xl: 2.5625rem;  /* 41px h1 on mobile */
+  --text-4xl: 4rem;       /* 64px hero, desktop only */
+
+  --leading-hero: 1.02;
+  --leading-tight: 1.15;
+  --leading-snug: 1.3;
+  --leading-body: 1.55;
+
+  --tracking-hero: -0.032em; /* big type always needs negative tracking */
+  --tracking-head: -0.018em;
+  --tracking-body: 0;
+  --tracking-label: 0.08em;  /* small caps labels only */
+
+  --weight-body: 400;
+  --weight-medium: 500;
+  --weight-head: 620;        /* not 700. 700 is heavy on most sans */
+
+  /* ---- Space --------------------------------------------------------- */
+  /* 4px base, 8px rhythm. Nothing between steps. */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.5rem;   /* 24px */
+  --space-6: 2rem;     /* 32px */
+  --space-7: 3rem;     /* 48px */
+  --space-8: 4rem;     /* 64px */
+  --space-10: 6rem;    /* 96px */
+  --space-12: 8rem;    /* 128px section gap, desktop */
+  --space-16: 12rem;   /* 192px hero top/bottom, desktop */
+
+  /* ---- Colour, by role ----------------------------------------------- */
+  --bg: #FBFBF9;
+  --surface: #FFFFFF;
+  --surface-sunken: #F2F1ED;
+  --border: #E4E2DC;
+  --border-strong: #C8C5BC;
+  --text: #14140F;
+  --text-muted: #5B5951;
+  --text-faint: #8A877D;
+  --accent: #1B4D3E;
+  --accent-hover: #143A2E;
+  --accent-contrast: #FFFFFF;
+  --focus: #2F6FED;
+  --danger: #B3261E;
+
+  /* ---- Shape --------------------------------------------------------- */
+  --radius-sm: 6px;     /* inputs, small buttons */
+  --radius-md: 10px;    /* cards, panels */
+  --radius-lg: 16px;    /* modals, media */
+  --radius-pill: 999px; /* pills, avatars */
+  --border-hairline: 1px;
+
+  /* ---- Depth --------------------------------------------------------- */
+  /* Two levels. If you need a third, you have a layout problem. */
+  --shadow-1: 0 1px 2px rgb(20 20 15 / 0.05),
+              0 1px 1px rgb(20 20 15 / 0.04);
+  --shadow-2: 0 8px 24px rgb(20 20 15 / 0.08),
+              0 2px 6px rgb(20 20 15 / 0.05);
+
+  /* ---- Motion -------------------------------------------------------- */
+  --dur-fast: 120ms;   /* hover, focus, colour */
+  --dur-base: 220ms;   /* reveal, expand, transform */
+  --dur-slow: 420ms;   /* page and route transitions only */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* ---- Layout -------------------------------------------------------- */
+  --measure: 68ch;     /* max body line length */
+  --container: 1180px;
+  --gutter: var(--space-5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E0E0C;
+    --surface: #171715;
+    --surface-sunken: #0A0A09;
+    --border: #262622;
+    --border-strong: #3A3A34;
+    --text: #F5F4F0;
+    --text-muted: #A9A69C;
+    --text-faint: #726F67;
+    --accent: #4FD1A5;
+    --accent-hover: #66E0B8;
+    --accent-contrast: #0E0E0C;
+    --shadow-1: 0 1px 2px rgb(0 0 0 / 0.4);
+    --shadow-2: 0 8px 24px rgb(0 0 0 / 0.5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- How to use this file -------------------------------------------
+ *
+ * 1. No raw values in components. If you need a value that isn't here,
+ *    add it here first with a comment saying why.
+ * 2. Section rhythm: --space-12 between sections on desktop, --space-8 on
+ *    mobile. Never a value in between.
+ * 3. Only one element on a page uses --text-4xl. Usually the hero h1.
+ * 4. Body copy is capped at --measure. Wide text is the fastest way to
+ *    make a page feel cheap.
+ * 5. Borders before shadows. --shadow-1 for cards that lift on hover,
+ *    --shadow-2 only for things floating over the page. Nothing else.
+ * 6. --accent is for actions. A heading is never the accent colour.
+ * 7. Focus is always visible: 2px solid var(--focus), 2px offset.
+ * ------------------------------------------------------------------- */
