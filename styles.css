@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--weight-body);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
+}
+
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+}
+
+.container {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* ---- Hero ---------------------------------------------------------- */
+
+.hero {
+  padding-block: var(--space-8);
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-body);
+  line-height: var(--leading-hero);
+  letter-spacing: var(--tracking-hero);
+  margin-block-end: var(--space-6);
+}
+
+.hero__lead {
+  max-width: var(--measure);
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+  color: var(--text-muted);
+  margin-block-end: var(--space-6);
+}
+
+/* ---- Button -------------------------------------------------------- */
+
+.button {
+  display: inline-block;
+  padding: var(--space-3) var(--space-5);
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border: var(--border-heavy) solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-tight);
+  text-decoration: none;
+  transition: background var(--dur-fast) var(--ease-out);
+}
+
+.button:hover {
+  background: var(--accent-hover);
+}
+
+.button:focus-visible {
+  outline: var(--border-heavy) solid var(--focus);
+  outline-offset: var(--border-heavy);
+}
+
+/* ---- Value / proof ------------------------------------------------- */
+
+.value {
+  padding-block: var(--space-8);
+  border-top: var(--border-hairline) solid var(--border);
+}
+
+.value__title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-body);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-head);
+  margin-block-end: var(--space-6);
+}
+
+.value__list {
+  max-width: var(--measure);
+  padding: 0;
+  list-style: none;
+}
+
+.value__list li {
+  padding-block: var(--space-4);
+  border-top: var(--border-hairline) solid var(--border);
+}
+
+/* ---- Footer -------------------------------------------------------- */
+
+.footer {
+  padding-block: var(--space-6);
+  border-top: var(--border-hairline) solid var(--border);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.footer__links {
+  display: flex;
+  gap: var(--space-5);
+}
+
+.footer__links a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.footer__links a:hover {
+  color: var(--text-muted);
+}
+
+.footer__links a:focus-visible {
+  outline: var(--border-heavy) solid var(--focus);
+  outline-offset: var(--border-heavy);
+}
+
+/* ---- Desktop ------------------------------------------------------- */
+/* Media queries cannot read var(), so this one breakpoint is the only
+   raw value in the file. */
+
+@media (min-width: 48em) {
+  .hero {
+    padding-block: var(--space-16) var(--space-12);
+  }
+
+  .hero__title {
+    font-size: var(--text-4xl);
+  }
+
+  .value {
+    padding-block: var(--space-12);
+  }
+
+  .value__title {
+    font-size: var(--text-2xl);
+  }
+}

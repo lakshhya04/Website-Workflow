@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[Brand] · [Tagline]</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700&family=Archivo+Black&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="design/tokens.css">
+  <link rel="stylesheet" href="replica.css">
+</head>
+<body>
+  <p class="bar label">[Announcement text]</p>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <header class="nav">
+        <div class="container nav__inner">
+          <a class="button" href="#">[Shop now]</a>
+          <nav class="nav__links label" aria-label="Primary">
+            <a href="#">[Link one]</a>
+            <a href="#">[Link two]</a>
+            <a href="#">[Link three]</a>
+          </nav>
+          <a class="nav__cart" href="#">[Cart (0)]</a>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="hero__stage">
+          <h1 class="hero__title">Coffee without curfew</h1>
+          <img class="hero__cup" src="images/hero-cup.png" width="991" height="833" alt="A faceted glass of espresso with golden crema">
+          <p class="hero__wordmark" aria-hidden="true">HEIST</p>
+        </div>
+
+        <div class="hero__row">
+          <div class="hero__left">
+            <p class="hero__line">[Left line]</p>
+          </div>
+          <div class="media media--portrait" role="img" aria-label="[Secondary hero image description]"><span>[Image]</span></div>
+          <div class="hero__right">
+            <p class="hero__line">[Right line]</p>
+            <p class="hero__lead">[Lead paragraph, one or two sentences]</p>
+            <a class="button" href="#">[Primary action]</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">[Product section headline]</h2>
+          <ul class="badges label">
+            <li class="badge">[Badge one]</li>
+            <li class="badge">[Badge two]</li>
+            <li class="badge">[Badge three]</li>
+            <li class="badge">[Badge four]</li>
+          </ul>
+        </div>
+        <div class="tiles">
+          <article class="tile">
+            <div class="media media--portrait" role="img" aria-label="[Product one image description]"><span>[Image]</span></div>
+            <div class="tile__body">
+              <h3 class="tile__name">[PRODUCT ONE]</h3>
+              <p class="tile__sub">[Variant]</p>
+              <p class="label">[Note, note, note]</p>
+            </div>
+          </article>
+          <article class="tile">
+            <div class="media media--portrait" role="img" aria-label="[Product two image description]"><span>[Image]</span></div>
+            <div class="tile__body">
+              <h3 class="tile__name">[PRODUCT TWO]</h3>
+              <p class="tile__sub">[Variant]</p>
+              <p class="label">[Note, note, note]</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video band -->
+    <section class="section section--tight">
+      <div class="container">
+        <p class="label band__label">[Video label]</p>
+        <div class="media media--wide" role="img" aria-label="[Video description]"><span>[Video]</span></div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title features__title">[Features headline]</h2>
+        <div class="features">
+          <ul class="features__list">
+            <li>[Feature one]</li>
+            <li>[Feature two]</li>
+            <li>[Feature three]</li>
+          </ul>
+          <div class="media media--portrait" role="img" aria-label="[Feature image description]"><span>[Image]</span></div>
+          <div class="features__side">
+            <ul class="features__list">
+              <li>[Feature four]</li>
+              <li>[Feature five]</li>
+              <li>[Feature six]</li>
+            </ul>
+            <div class="proof">
+              <p>[Proof line, for example who tested it and when]</p>
+              <p class="proof__sub">[Supporting detail]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison -->
+    <section class="section field-ink">
+      <div class="container">
+        <h2 class="section__title">[Comparison headline]</h2>
+        <p class="compare__intro">[Comparison intro, up to three short lines explaining how the comparison was made.]</p>
+
+        <div class="tabs" role="tablist" aria-label="Comparison">
+          <button class="tab label" role="tab" id="tab-1" aria-selected="true" aria-controls="panel-1" type="button">[Tab one]</button>
+          <button class="tab label" role="tab" id="tab-2" aria-selected="false" aria-controls="panel-2" tabindex="-1" type="button">[Tab two]</button>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1">
+          <ul class="chart">
+            <li class="chart__row"><span class="label">[Your product]</span><span class="chart__bar chart__bar--hl" style="--value: 92"><span class="label">[Metric]</span></span></li>
+            <li class="chart__row"><span class="label">[Competitor one]</span><span class="chart__bar" style="--value: 86"></span></li>
+            <li class="chart__row"><span class="label">[Competitor two]</span><span class="chart__bar" style="--value: 86"></span></li>
+            <li class="chart__row"><span class="label">[Competitor three]</span><span class="chart__bar" style="--value: 62"></span></li>
+            <li class="chart__row"><span class="label">[Competitor four]</span><span class="chart__bar" style="--value: 34"></span></li>
+            <li class="chart__row"><span class="label">[Competitor five]</span><span class="chart__bar" style="--value: 24"></span></li>
+          </ul>
+        </div>
+        <div class="panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden>
+          <ul class="chart">
+            <li class="chart__row"><span class="label">[Your product]</span><span class="chart__bar chart__bar--hl" style="--value: 88"><span class="label">[Metric]</span></span></li>
+            <li class="chart__row"><span class="label">[Other option one]</span><span class="chart__bar" style="--value: 80"></span></li>
+            <li class="chart__row"><span class="label">[Other option two]</span><span class="chart__bar" style="--value: 71"></span></li>
+            <li class="chart__row"><span class="label">[Other option three]</span><span class="chart__bar" style="--value: 55"></span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section field-blue">
+      <div class="container">
+        <h2 class="section__title">[Reviews headline]</h2>
+      </div>
+      <div class="container">
+        <ul class="scroller" aria-label="Reviews">
+          <li class="card card--media"><div class="media media--portrait" role="img" aria-label="[Customer photo description]"><span>[Image]</span></div></li>
+          <li class="card card--media"><div class="media media--portrait" role="img" aria-label="[Customer photo description]"><span>[Image]</span></div></li>
+          <li class="card card--review">
+            <dl class="review__fields label">
+              <div><dt>Name:</dt><dd>[Name]</dd></div>
+              <div><dt>Rating:</dt><dd>[5 / 5]</dd></div>
+              <div><dt>Product:</dt><dd>[Product]</dd></div>
+            </dl>
+            <blockquote class="review__quote">[Review quote, two or three sentences from a real customer.]</blockquote>
+            <div class="review__foot">
+              <div class="media media--square review__thumb" role="img" aria-label="[Product thumbnail description]"><span>[Img]</span></div>
+              <p class="label">[Verified buyer]</p>
+            </div>
+          </li>
+          <li class="card card--media"><div class="media media--portrait" role="img" aria-label="[Customer photo description]"><span>[Image]</span></div></li>
+          <li class="card card--review">
+            <dl class="review__fields label">
+              <div><dt>Name:</dt><dd>[Name]</dd></div>
+              <div><dt>Rating:</dt><dd>[5 / 5]</dd></div>
+              <div><dt>Product:</dt><dd>[Product]</dd></div>
+            </dl>
+            <blockquote class="review__quote">[Review quote, two or three sentences from a real customer.]</blockquote>
+            <div class="review__foot">
+              <div class="media media--square review__thumb" role="img" aria-label="[Product thumbnail description]"><span>[Img]</span></div>
+              <p class="label">[Verified buyer]</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Statement and collage -->
+    <section class="section field-ink">
+      <div class="container">
+        <p class="statement">[Statement, up to three short lines. Say who it is for and what they get.]</p>
+        <div class="collage">
+          <div class="media media--portrait" role="img" aria-label="[Collage image description]"><span>[Image]</span></div>
+          <div class="media media--square" role="img" aria-label="[Collage image description]"><span>[Image]</span></div>
+          <div class="media media--portrait" role="img" aria-label="[Collage image description]"><span>[Image]</span></div>
+          <div class="media media--square" role="img" aria-label="[Collage image description]"><span>[Image]</span></div>
+          <div class="media media--portrait" role="img" aria-label="[Collage image description]"><span>[Image]</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guide -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">[Guide headline]</h2>
+      </div>
+      <div class="container">
+        <ul class="scroller" aria-label="Guide">
+          <li class="card card--guide"><div class="media media--portrait" role="img" aria-label="[Guide image description]"><span>[Image]</span></div><p class="card__caption label">[Step one]</p></li>
+          <li class="card card--guide"><div class="media media--portrait" role="img" aria-label="[Guide image description]"><span>[Image]</span></div><p class="card__caption label">[Step two]</p></li>
+          <li class="card card--guide"><div class="media media--portrait" role="img" aria-label="[Guide image description]"><span>[Image]</span></div><p class="card__caption label">[Step three]</p></li>
+          <li class="card card--guide"><div class="media media--portrait" role="img" aria-label="[Guide image description]"><span>[Image]</span></div><p class="card__caption label">[Step four]</p></li>
+          <li class="card card--guide"><div class="media media--portrait" role="img" aria-label="[Guide image description]"><span>[Image]</span></div><p class="card__caption label">[Step five]</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Social strip -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">[Social headline]</h2>
+          <a class="button button--ghost" href="#">[Follow @handle]</a>
+        </div>
+      </div>
+      <div class="container">
+        <ul class="scroller" aria-label="Social">
+          <li class="card"><div class="media media--portrait" role="img" aria-label="[Social image description]"><span>[Image]</span></div></li>
+          <li class="card"><div class="media media--portrait" role="img" aria-label="[Social image description]"><span>[Image]</span></div></li>
+          <li class="card"><div class="media media--portrait" role="img" aria-label="[Social image description]"><span>[Image]</span></div></li>
+          <li class="card"><div class="media media--portrait" role="img" aria-label="[Social image description]"><span>[Image]</span></div></li>
+          <li class="card"><div class="media media--portrait" role="img" aria-label="[Social image description]"><span>[Image]</span></div></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer field-ink">
+    <div class="container">
+      <p class="wordmark" aria-hidden="true">[BRAND]</p>
+      <div class="footer__grid">
+        <nav class="footer__links label" aria-label="Footer">
+          <a href="#">[Link]</a>
+          <a href="#">[Link]</a>
+          <a href="#">[Link]</a>
+          <a href="#">[Link]</a>
+          <a href="#">[Link]</a>
+          <a href="#">[Link]</a>
+          <a href="#">[Link]</a>
+        </nav>
+        <form class="signup" action="#">
+          <label class="label" for="signup-email">[Join the list]</label>
+          <div class="signup__row">
+            <input class="signup__input" id="signup-email" type="email" name="email" placeholder="[Email address]" autocomplete="email" required>
+            <button class="button" type="submit">[Join]</button>
+          </div>
+        </form>
+      </div>
+      <p class="footer__legal label">[Legal line] · [Brand] · [Year]</p>
+    </div>
+  </footer>
+
+  <script src="replica.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-29T06:00:00+00:00",
+  "title": "Design System: Vesper",
+  "extensions": {
+    "colorMeta": {
+      "oat-canvas": { "role": "neutral", "displayName": "Oat Canvas", "canonical": "#DDD6C7", "tonalRamp": ["#2A261D", "#4B4536", "#6E6652", "#93896F", "#B8AE97", "#DDD6C7", "#EDE8DC", "#F7F4EC"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#161414", "tonalRamp": ["#161414", "#2A2727", "#403C3B", "#5A5553", "#7A7471", "#A09A96", "#C9C4C1", "#EAE7E5"] },
+      "ink-muted": { "role": "neutral", "displayName": "Ink Muted", "canonical": "#5A544A", "tonalRamp": ["#1E1B16", "#38342C", "#5A544A", "#766F63", "#948C7E", "#B4AC9E", "#D2CCC0", "#EAE6DE"] },
+      "hairline": { "role": "neutral", "displayName": "Hairline", "canonical": "#C3BAA8", "tonalRamp": ["#3A352B", "#5C5546", "#7F7762", "#A2997F", "#C3BAA8", "#D6CFBF", "#E6E1D4", "#F3F0E8"] },
+      "hot-red": { "role": "primary", "displayName": "Hot Red", "canonical": "#FF3B27", "tonalRamp": ["#4D0F08", "#7A1B10", "#A82716", "#D43120", "#FF3B27", "#FF6F5E", "#FFA397", "#FFD3CC"] },
+      "hot-red-pressed": { "role": "primary", "displayName": "Hot Red Pressed", "canonical": "#E63320", "tonalRamp": ["#430E08", "#701A0F", "#9E2616", "#C42D1C", "#E63320", "#F2705F", "#F8A89D", "#FCD6D0"] },
+      "focus-blue": { "role": "tertiary", "displayName": "Focus Blue", "canonical": "#2B73F5", "tonalRamp": ["#0A1F4F", "#10357F", "#174CB0", "#2260DC", "#2B73F5", "#6196F8", "#9DBDFA", "#D3E2FD"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The single hero headline. One element per page at this size." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings." },
+      "lead": { "displayName": "Lead", "purpose": "The paragraph under the hero headline, in Ink Muted." },
+      "body": { "displayName": "Body", "purpose": "Proof points and running copy, capped at 68ch." },
+      "button": { "displayName": "Button label", "purpose": "The only 500-weight text on the page." },
+      "caption": { "displayName": "Caption", "purpose": "Footer tagline and links." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "dur-fast", "value": "120ms", "purpose": "Hover and focus colour changes." },
+      { "name": "ease-out", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Default easing for state transitions." }
+    ],
+    "breakpoints": [
+      { "name": "desktop", "value": "48em" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single action on the page. Hot red with an ink label and a hard ink border.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Shop the roast</a>",
+      "css": ".ds-btn-primary { display: inline-block; padding: 12px 24px; background: #FF3B27; color: #161414; border: 2px solid #161414; border-radius: 6px; font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 17px; font-weight: 500; line-height: 1.15; text-decoration: none; transition: background 120ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-primary:hover { background: #E63320; } .ds-btn-primary:focus-visible { outline: 2px solid #2B73F5; outline-offset: 2px; }"
+    },
+    {
+      "name": "Hero Headline",
+      "kind": "custom",
+      "refersTo": "display",
+      "description": "Display serif headline, tight tracking, left-aligned.",
+      "html": "<h1 class=\"ds-hero-title\">All the coffee. None of the clock-watching.</h1>",
+      "css": ".ds-hero-title { margin: 0; color: #161414; font-family: 'DM Serif Display', 'Times New Roman', serif; font-size: 64px; font-weight: 400; line-height: 1.02; letter-spacing: -0.032em; }"
+    },
+    {
+      "name": "Proof List",
+      "kind": "custom",
+      "refersTo": "body",
+      "description": "Plain rows of body copy separated by hairlines. No bullets, icons or cards.",
+      "html": "<ul class=\"ds-proof\"><li>Swiss Water Process — 99.9% caffeine-free, no chemical solvents, ever.</li><li>Single-origin beans, roasted in small batches and shipped within seven days.</li></ul>",
+      "css": ".ds-proof { max-width: 68ch; margin: 0; padding: 0; list-style: none; color: #161414; font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 17px; line-height: 1.55; } .ds-proof li { padding: 16px 0; border-top: 1px solid #C3BAA8; }"
+    },
+    {
+      "name": "Footer Link",
+      "kind": "nav",
+      "refersTo": "caption",
+      "description": "Plain text link that fades to muted ink on hover.",
+      "html": "<a class=\"ds-footer-link\" href=\"#\">Shop</a>",
+      "css": ".ds-footer-link { color: #161414; font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 14px; text-decoration: none; transition: color 120ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-footer-link:hover { color: #5A544A; } .ds-footer-link:focus-visible { outline: 2px solid #2B73F5; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Dusk Counter",
+    "overview": "A shop counter at closing time: warm oat light, ink-dark type, and one bold red sign on the counter that says where to act. The page is confident, editorial and calm. Headlines are set large in a display serif and left-aligned, the copy that follows is plain, and almost everything else is air.\n\nColour is rationed. The oat canvas, ink text and hairlines carry the whole page, and the single hot red appears only on the action. Structure comes from spacing and thin rules, not from boxes, shadows or ornament.",
+    "keyCharacteristics": [
+      "Left-aligned, type-led layout on one shared edge.",
+      "One accent, used for the action only.",
+      "Hairline rules divide sections and list rows, and there are no shadows at rest.",
+      "A strong size step between display headlines and body copy, with a single weight on the headings.",
+      "Generous, scale-based vertical space: 128px between desktop sections, 64px on mobile."
+    ],
+    "rules": [
+      { "name": "The One Signal Rule", "body": "Hot red marks an action and nothing else. A heading, rule, icon or background is never red.", "section": "colors" },
+      { "name": "The Ink-on-Red Rule", "body": "Text on the accent is ink (#161414), not white.", "section": "colors" },
+      { "name": "The Two-Weight Rule", "body": "Only 400 and 500 appear on a screen. Hierarchy comes from size, not weight.", "section": "typography" },
+      { "name": "The Tight Display Rule", "body": "Large type always carries negative tracking, and the larger the type, the tighter it sits.", "section": "typography" },
+      { "name": "The Borders-Before-Shadows Rule", "body": "Separate things with a rule or a border. A shadow is reserved for something floating over the page.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Hot Red (#FF3B27) only for the primary action, with Ink (#161414) text on it.",
+      "Do keep every block on one left edge and cap running copy at 68ch.",
+      "Do set the hero at the display size and let nothing else on the page use it.",
+      "Do space sections with the 128px desktop and 64px mobile steps, and nothing in between.",
+      "Do separate content with 1px Hairline (#C3BAA8) rules."
+    ],
+    "donts": [
+      "Don't use more than the 400 and 500 weights on one screen.",
+      "Don't add shadows to anything that isn't floating over the page.",
+      "Don't use gradients, emoji icons or three-column icon-card grids.",
+      "Don't use a radius above 16px on anything except a pill button or an avatar.",
+      "Don't centre-align body copy longer than two lines.",
+      "Don't colour a heading with the accent."
+    ]
+  }
+}

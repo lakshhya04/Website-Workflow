@@ -4,8 +4,10 @@
   /* ---- Type ---------------------------------------------------------- */
   /* Scale: 1.25 major third, base 17px. Every size below is on the scale
      or is a deliberate exception, noted inline. */
-  --font-sans: "Inter Tight", Inter, system-ui, -apple-system, sans-serif;
+  --font-display: "DM Serif Display", "Times New Roman", serif;    /* hero + headings */
+  --font-sans: "Hanken Grotesk", system-ui, -apple-system, sans-serif; /* body + UI */
   --font-mono: ui-monospace, "SF Mono", "Berkeley Mono", monospace;
+  --font-heavy: "Archivo Black", "Arial Black", sans-serif; /* wordmarks, product names, tile titles. One weight, so never bold it */
 
   --text-xs: 0.75rem;     /* 12px labels, captions, legal */
   --text-sm: 0.875rem;    /* 14px secondary body, table cells */
@@ -15,6 +17,8 @@
   --text-2xl: 2.0625rem;  /* 33px h2 */
   --text-3xl: 2.5625rem;  /* 41px h1 on mobile */
   --text-4xl: 4rem;       /* 64px hero, desktop only */
+  --text-5xl: 6rem;       /* 96px replica hero headline and footer wordmark. Display ceiling for text */
+  --text-6xl: 16rem;      /* 256px hero logotype only, sized to span the hero. Never text */
 
   --leading-hero: 1.02;
   --leading-tight: 1.15;
@@ -45,19 +49,21 @@
   --space-16: 12rem;   /* 192px hero top/bottom, desktop */
 
   /* ---- Colour, by role ----------------------------------------------- */
-  --bg: #FBFBF9;
-  --surface: #FFFFFF;
-  --surface-sunken: #F2F1ED;
-  --border: #E4E2DC;
-  --border-strong: #C8C5BC;
-  --text: #14140F;
-  --text-muted: #5B5951;
-  --text-faint: #8A877D;
-  --accent: #1B4D3E;
-  --accent-hover: #143A2E;
-  --accent-contrast: #FFFFFF;
-  --focus: #2F6FED;
+  --bg: #DDD6C7;             /* oat canvas */
+  --surface: #EEEAE0;        /* raised panel / card */
+  --surface-sunken: #CFC7B6; /* inset / subtle fill */
+  --border: #C3BAA8;         /* hairline on oat */
+  --border-strong: #161414;  /* heist uses hard ink borders */
+  --text: #161414;           /* ink */
+  --text-muted: #5A544A;
+  --text-faint: #8A8275;
+  --accent: #FF3B27;         /* hot red — actions only */
+  --accent-hover: #E63320;
+  --accent-contrast: #161414;/* heist puts INK text on red, not white */
+  --focus: #2B73F5;          /* heist hero blue */
   --danger: #B3261E;
+  --field-blue: #2B73F5;     /* full-bleed blue section field, same hue as --focus. Ink text only, and only large text: ink on this blue is 4.3:1 */
+  --field-hero: linear-gradient(var(--text) 0%, var(--field-blue) 65%); /* replica hero only. TASTE.md bans gradient backgrounds; the owner asked to match the live reference, so this is the one sanctioned exception. Delete this line and use --field-blue to revert */
 
   /* ---- Shape --------------------------------------------------------- */
   --radius-sm: 6px;     /* inputs, small buttons */
@@ -65,6 +71,7 @@
   --radius-lg: 16px;    /* modals, media */
   --radius-pill: 999px; /* pills, avatars */
   --border-hairline: 1px;
+  --border-heavy: 2px;  /* hard ink borders, e.g. buttons */
 
   /* ---- Depth --------------------------------------------------------- */
   /* Two levels. If you need a third, you have a layout problem. */
@@ -84,6 +91,11 @@
   --measure: 68ch;     /* max body line length */
   --container: 1180px;
   --gutter: var(--space-5);
+  --ratio-portrait: 4 / 5;   /* image placeholders and tiles */
+  --ratio-wide: 16 / 9;
+  --ratio-square: 1 / 1;
+  --card-w: 20rem;           /* 320px carousel card width */
+  --col-label: 14rem;        /* 224px chart label column */
 }
 
 @media (prefers-color-scheme: dark) {
